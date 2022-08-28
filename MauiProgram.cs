@@ -4,16 +4,16 @@
     {
         public static MauiApp CreateMauiApp()
         {
-            var builder = MauiApp.CreateBuilder();
-            builder
+            MauiAppBuilder Builder = MauiApp.CreateBuilder();
+            Builder
                 .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
+                .ConfigureFonts(Fonts =>
                 {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    Fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    Fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
-            return builder.Build();
+            return Builder.Build();
         }
     }
 }
