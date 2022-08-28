@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Artext.MainPage"
-             BackgroundColor="AliceBlue">
+             BackgroundColor="DimGray">
 
     <ScrollView>
         <VerticalStackLayout
@@ -14,10 +14,10 @@
                 CornerRadius="0"
                 x:Name="CounterBtn"
                 Text="Create an artext file"
-                TextColor="Black"
+                TextColor="White"
                 BorderColor="#8808bf"
                 BorderWidth="2"
-                BackgroundColor="AliceBlue"
+                BackgroundColor="Grey"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
