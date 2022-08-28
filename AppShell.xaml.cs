@@ -1,9 +1,10 @@
-﻿namespace Artext;
-
-public partial class AppShell : Shell
+﻿namespace Artext
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
