@@ -12,12 +12,10 @@ namespace Artext.Structures.FileExtension
         /// Initializes a new instance of the <see cref="ArtextFile"/> class.
         /// </summary>
         /// <param name="RawFileLocation">The location of the file.</param>
-        /// <param name="AutoSave">Whether to auto-save the file. If false, please call <see cref="Save"/>
         /// to save all written data.</param>
-        public ArtextFile(string RawFileLocation, bool AutoSave = false)
+        public ArtextFile(string RawFileLocation)
         {
             this.RawFileLocation = RawFileLocation;
-            this.AutoSave = AutoSave;
         }
 
         public string RawFileLocation { get; }
@@ -28,6 +26,10 @@ namespace Artext.Structures.FileExtension
 
         private MemoryStream? GetStream()
         {
+            if(!File.Exists(this.RawFileLocation))
+            {
+                File.Create(this.RawFileLocation);
+            }
             if(File.Exists(this.RawFileLocation))
             {
                 this.RawStream ??= new();
@@ -53,7 +55,7 @@ namespace Artext.Structures.FileExtension
         }
 
         /// <summary>
-        /// Clears the buffer, and clears the file if <see cref="AutoSave"/> is true.
+        /// Clears the buffer.
         /// </summary>
         public void Clear()
         {
@@ -65,7 +67,7 @@ namespace Artext.Structures.FileExtension
         }
 
         /// <summary>
-        /// Writes a string to the buffer, and saves if <see cref="AutoSave"/> is true.
+        /// Writes a string to the buffer.
         /// </summary>
         /// <param name="Write">The string to write.</param>
         public void WriteString(string Write)

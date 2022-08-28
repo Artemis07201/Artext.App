@@ -12,14 +12,14 @@
 
             <Button
                 CornerRadius="0"
-                x:Name="CounterBtn"
+                x:Name="CreateBtn"
                 Text="Create an artext file"
                 TextColor="Black"
                 BorderColor="#8808bf"
                 BorderWidth="2"
                 BackgroundColor="AliceBlue"
                 SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Clicked="OnCreateClickedAsync"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>

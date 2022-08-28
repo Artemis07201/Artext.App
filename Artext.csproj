@@ -58,4 +58,10 @@
 	  <None Remove="Structures\NewFile1.txt" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="ArtextFileDisplay.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
